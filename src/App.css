@@ -1,15 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
-
+/* @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700'); */
+@import url('https://fonts.googleapis.com/css?family=Open Sans:300,400,700');
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-a {
-  color: #333;
-  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .container {
@@ -27,15 +23,4 @@ a {
 
 .btn:hover {
   background: #666;
-}
-
-.Header-bar{
-  font-family: 'Lato', sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.8;
-  padding-left: 10px;
-  padding-right: 10px;
-  background: #5B818D;
-  color: #FFFFFF
 }
