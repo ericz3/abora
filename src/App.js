@@ -1,12 +1,14 @@
 import React from 'react';
 import Header from './components/Header';
+import MacTitleBar from './components/MacTitleBar';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <body className="App">
+      <MacTitleBar />
       <Header />
-    </div>
+    </body>
   );
 }
 
