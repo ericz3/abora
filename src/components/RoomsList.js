@@ -2,30 +2,11 @@ import React from 'react';
 import propTypes from 'prop-types';
 import {FaPlus} from 'react-icons/fa'
 import {FaCaretDown, FaCaretRight} from 'react-icons/fa'
+import './RoomsList.css'
 
 const roomTypes = {
     personal: 'personal',
     team: 'team'
-}
-
-const dropDownStyle = {
-    background : '#DADADA',
-    height : '40px',
-    color: '#454545',
-    fontWeight: '600', 
-    fontSize: '15px',
-    paddingTop: '12px',
-    paddingLeft: '19px',
-    paddingRight: '14px'
-}
-
-const createRoomButtonStyle = {
-    float: 'right',
-    borderRadius: '20%',
-    width: '25px',
-    height: '25px',
-    padding: '5px',
-    marginTop: '-5px'
 }
 
 class RoomsList extends React.Component {
@@ -50,24 +31,23 @@ class RoomsList extends React.Component {
     };
 
     render() {
+        let caret = this.state.show 
+                    ? <FaCaretDown className='float-left'/> 
+                    : <FaCaretRight className='float-left'/>
+        let dropDownTitle = (this.props.roomType === roomTypes.team) 
+                    ? 'Team Rooms'
+                    : 'Personal Rooms'
         return (
             <div>
-                <div style = {dropDownStyle} onClick = {this.toggleShow}>
-                    {this.state.show ? <FaCaretDown style = {{float: 'left'}}/> : 
-                        <FaCaretRight style = {{float: 'left'}}/>}
-                    <div style = {{float: 'left', marginLeft: '14px'}}> 
-                        {this.props.roomType === roomTypes.team 
-                            ? 'Team Rooms': 'Personal Rooms'}
+                <div className='drop-down' onClick={this.toggleShow}>
+                    {caret}
+                    <div className='drop-down-title'> 
+                        {dropDownTitle}
                     </div>
-                    {this.props.roomType === roomTypes.team ? 
-                        <div 
-                            background = {this.buttonHover ? '#FF0000':'#DADADA'}
-                            style = {createRoomButtonStyle} 
-                            onClick = {this.createRoom}
-                            onMouseEnter = {this.toggleButtonHover}
-                            onMouseLeave = {this.toggleButtonHover}>
+                    {this.props.roomType === roomTypes.team && 
+                        <div className='create-room-button' onClick={this.createRoom}>
                             <FaPlus/>
-                        </div> : ''
+                        </div>
                     }
                 </div>
                 {/* replace with list*/}
