@@ -8,12 +8,12 @@ const roomTypes = {
 
 const dropDownHeaderStyle = {
     background : '#DADADA',
-    height : '38px',
+    height : '40px',
     color: '#454545',
-    paddingLeft: '20px',
-    paddingTop: '10px',
+    paddingLeft: '26px',
+    paddingTop: '12px',
     fontWeight: '600',
-    fontSize: '16px'
+    fontSize: '14px'
 }
 
 class RoomsList extends React.Component {
