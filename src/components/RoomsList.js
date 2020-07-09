@@ -20,46 +20,52 @@ const dropDownStyle = {
 }
 
 const createRoomButtonStyle = {
-    // background : '#FFFFFFFF',
     float: 'right',
     borderRadius: '20%',
-    width: '24px',
-    height: '24px',
-    padding: '4px',
-    marginTop: '-4px',
+    width: '25px',
+    height: '25px',
+    padding: '5px',
+    marginTop: '-5px'
 }
 
 class RoomsList extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            show: true
+            show: true,
+            buttonHover : false
         };
     }
 
     toggleShow = () => {
         this.setState(state => ({show : !state.show}));
-        console.log(this.state.show)
     };
 
     createRoom = () => {
         this.setState(state => ({show : !state.show}));
-        console.log('add')
     }
+
+    toggleButtonHover = () => {
+        this.setState(state => ({buttonHover : !state.buttonHover}));
+    };
 
     render() {
         return (
             <div>
                 <div style = {dropDownStyle} onClick = {this.toggleShow}>
-                    {this.state.show ? <FaCaretDown style = {{float: 'left'}}/> : <FaCaretRight style = {{float: 'left'}}/>}
+                    {this.state.show ? <FaCaretDown style = {{float: 'left'}}/> : 
+                        <FaCaretRight style = {{float: 'left'}}/>}
                     <div style = {{float: 'left', marginLeft: '14px'}}> 
                         {this.props.roomType === roomTypes.team 
                             ? 'Team Rooms': 'Personal Rooms'}
                     </div>
                     {this.props.roomType === roomTypes.team ? 
                         <div 
+                            background = {this.buttonHover ? '#FF0000':'#DADADA'}
                             style = {createRoomButtonStyle} 
-                            onClick = {this.createRoom}>
+                            onClick = {this.createRoom}
+                            onMouseEnter = {this.toggleButtonHover}
+                            onMouseLeave = {this.toggleButtonHover}>
                             <FaPlus/>
                         </div> : ''
                     }
