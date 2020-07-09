@@ -4,14 +4,11 @@ import logo from '../placeholdLogo.png';
 class Header extends React.Component{
     render(){
         const headerLogoStyle = {
-            paddingLeft: '14px',
-            paddingTop: '8px',
-            float: 'left'
-        }
-        
-        const logoImageStyle = {
-            width: '38px',
-            height: '38px',
+            float: 'left',
+            marginLeft: '14px',
+            marginTop: '8px',
+            width: '39px',
+            height: '39px',
             borderRadius: '25%'
         }
         
@@ -26,9 +23,7 @@ class Header extends React.Component{
 
         return (
             <header style = {{width: '100%', height: '54px', background: '#FFFFFF',}}>
-                <div style = {headerLogoStyle}> 
-                    <img src = {logo} alt = 'logo' style={logoImageStyle}></img>
-                </div>
+                <img src = {logo} alt = 'logo' style={headerLogoStyle}></img>
                 <div style = {headerTitleStyle}>Temp Name</div>    
             </header>
         )
