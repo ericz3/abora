@@ -7,7 +7,7 @@ function createWindow () {
   const win = new BrowserWindow({
     width: 450,
     height: 800,
-    titleBarStyle: 'hidden',
+    // titleBarStyle: 'hidden',
     webPreferences: {
       nodeIntegration: true
     }
@@ -20,6 +20,8 @@ function createWindow () {
 
   // Open the DevTools.
   win.webContents.openDevTools()
+
+
 }
 
 // This method will be called when Electron has finished
