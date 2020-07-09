@@ -2,10 +2,6 @@ import React from 'react';
 import logo from '../placeholdLogo.png';
 
 class Header extends React.Component{
-    constructor(props){
-        super(props);
-    }
-
     render(){
         const headerLogoStyle = {
             paddingLeft: '10px',
@@ -21,7 +17,7 @@ class Header extends React.Component{
         
         const headerTitleStyle = {
             fontSize: '22px',
-            fontWeight: '400',
+            fontWeight: '600',
             color: '#454545',
             paddingTop: '14px',
             marginLeft: '58px'
