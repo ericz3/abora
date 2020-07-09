@@ -19,7 +19,10 @@
     height: 25px;
     padding: 5px;
     margin-top: -5px;
-    
+}
+
+.create-room-button:hover {
+    background-color: #ECECEC;
 }
 
 .drop-down-title {
