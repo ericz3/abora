@@ -1,35 +1,38 @@
 import React from 'react';
 import logo from '../placeholdLogo.png';
 
-function Header(){
-    return (
-        <header style = {{width: '100%', height: '50px', background: '#5B818D',}}>
-            <div style = {headerLogoStyle}> 
-                <img src = {logo} alt = 'logo' style={logoImageStyle}></img>
-            </div>
-            <div style = {headerTitleStyle}>Team Name Placeholder</div>    
-        </header>
-    )
-}
+class Header extends React.Component{
+    render(){
+        const headerLogoStyle = {
+            paddingLeft: '10px',
+            paddingTop: '8px',
+            float: 'left'
+        }
+        
+        const logoImageStyle = {
+            width: '38px',
+            height: '38px',
+            borderRadius: '15%'
+        }
+        
+        const headerTitleStyle = {
+            fontSize: '22px',
+            fontWeight: '600',
+            color: '#454545',
+            paddingTop: '14px',
+            marginLeft: '58px'
+        }
 
-const headerLogoStyle = {
-    paddingLeft: '10px',
-    paddingTop: '6px',
-    float: 'left'
-}
+        return (
+            <header style = {{width: '100%', height: '54px', background: '#FFFFFF',}}>
+                <div style = {headerLogoStyle}> 
+                    <img src = {logo} alt = 'logo' style={logoImageStyle}></img>
+                </div>
+                <div style = {headerTitleStyle}>Temp Name</div>    
+            </header>
+        )
+    }
 
-const logoImageStyle = {
-    width: '36px',
-    height: '36px',
-    borderRadius: '15%'
-}
-
-const headerTitleStyle = {
-    fontSize: '22px',
-    fontWeight: '400',
-    color: '#FFFFFF',
-    paddingTop: '12px',
-    marginLeft: '58px'
 }
 
 export default Header;
