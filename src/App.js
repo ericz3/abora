@@ -9,6 +9,7 @@ class App extends React.Component{
       <div className="App">
         <Header />
         <RoomsList roomType = {RoomsList.roomTypes.team}/>
+        <div style = {{height:'1px', background:'#FFFFFF'}}/>
         <RoomsList roomType = {RoomsList.roomTypes.personal}/>
       </div>
     );
