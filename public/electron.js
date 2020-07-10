@@ -21,7 +21,7 @@ function createWindow () {
   // Open the DevTools.
   win.webContents.openDevTools()
 
-
+  win.removeMenu();
 }
 
 // This method will be called when Electron has finished
