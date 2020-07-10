@@ -12,14 +12,15 @@ input {
     width: 100%;
     font-size: 14px;
     color: #000000;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 5px;
     background-color: #E7E7E7;
     padding-left: 35px;
 }
 
 input:focus {
-    outline-color: #add2ef;
+    outline: none;
+    border: 2px solid #add2ef;
 }
 
 .search-icon {
