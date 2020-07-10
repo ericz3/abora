@@ -1,16 +1,23 @@
 import React from 'react';
 import Header from './components/Header';
 import RoomsList from './components/RoomsList';
+import RoomsSearchBar from './components/SearchBar';
 import './App.css';
 
 class App extends React.Component{
   render (){
     return (
-      <div className="App">
+      <div className='App'>
         <Header />
-        <RoomsList roomType = {RoomsList.roomTypes.team}/>
-        <div style = {{height:'1px', background:'#FFFFFF'}}/>
-        <RoomsList roomType = {RoomsList.roomTypes.personal}/>
+        <div className='scroll-content'>
+          <RoomsList roomType={RoomsList.roomTypes.team}/>
+          <div className='line-horizontal-white'/>
+          <RoomsList roomType={RoomsList.roomTypes.personal}/>
+        </div>
+        <div className='line-horizontal-gray'/> 
+        <div className='rooms-search-footer'>
+          <RoomsSearchBar/>
+        </div>
       </div>
     );
   }

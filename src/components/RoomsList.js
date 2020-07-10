@@ -13,8 +13,7 @@ class RoomsList extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            show: true,
-            buttonHover : false
+            show: true
         };
     }
 
@@ -26,10 +25,6 @@ class RoomsList extends React.Component {
         this.setState(state => ({show : !state.show}));
     }
 
-    toggleButtonHover = () => {
-        this.setState(state => ({buttonHover : !state.buttonHover}));
-    };
-
     render() {
         let caret = this.state.show 
                     ? <FaCaretDown className='float-left'/> 
@@ -38,7 +33,7 @@ class RoomsList extends React.Component {
                     ? 'Team Rooms'
                     : 'Personal Rooms'
         return (
-            <div>
+            <div className='unselectable'>
                 <div className='drop-down' onClick={this.toggleShow}>
                     {caret}
                     <div className='drop-down-title'> 
@@ -51,7 +46,7 @@ class RoomsList extends React.Component {
                     }
                 </div>
                 {/* replace with list*/}
-                {this.state.show ? <div style = {{height : '40px', background : '#FFFFFF'}}></div> : ''}
+                {this.state.show && <div style = {{height : '40px', background : '#FFFFFF'}}></div>}
             </div>
         );
     }
