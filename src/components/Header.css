@@ -1,0 +1,23 @@
+.header-bar {
+    width: 100%; 
+    height: 56px; 
+    background-color: #FFFFFF
+}
+
+.logo {
+    float: left;
+    margin-left: 14px;
+    margin-top: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #454545;
+    padding-top: 16px;
+    margin-left: 64px;
+    letter-spacing: 1.2px
+}

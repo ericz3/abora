@@ -8,11 +8,15 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.container {
-  padding: 0 1rem;
+*.unselectable {
+  -webkit-user-select: none;
 }
 
-.btn {
+/* .container {
+  padding: 0 1rem;
+} */
+
+/* .btn {
   display: inline-block;
   border: none;
   background: #555;
@@ -23,4 +27,35 @@
 
 .btn:hover {
   background: #666;
+} */
+
+.App {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 100%
+}
+
+.line-horizontal-white {
+  height: 1px;
+  background-color: #FFFFFF
+}
+
+.line-horizontal-gray {
+  height: 1px;
+  background-color: #dadada
+}
+
+.scroll-content {
+  background-color: #ffffff;
+  flex : 1 1 auto;
+}
+
+.rooms-search-footer {
+  flex: 0 1 50px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 15px;
+  padding-bottom: 11px;
+  background-color: #ffffff;
 }
