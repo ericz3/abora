@@ -1,0 +1,26 @@
+.video-control-bar{
+    height: 24px;
+    background-color: E7E7E7;
+    width: 100%;
+}
+
+.share-screen-icon {
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 4px;
+    color: #454545
+}
+
+.video-icon {
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 4px;
+    color: #454545
+}
+
+.audio-icon {
+    position: absolute;
+    margin-left: 70%;
+    margin-top: 4px;
+    color: #454545
+}

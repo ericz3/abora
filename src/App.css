@@ -12,23 +12,6 @@
   -webkit-user-select: none;
 }
 
-/* .container {
-  padding: 0 1rem;
-} */
-
-/* .btn {
-  display: inline-block;
-  border: none;
-  background: #555;
-  color: #fff;
-  padding: 7px 20px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background: #666;
-} */
-
 .App {
   display: flex;
   flex-flow: column;
@@ -36,22 +19,8 @@
   width: 100%
 }
 
-.line-horizontal-white {
-  height: 1px;
-  background-color: #FFFFFF
-}
 
-.line-horizontal-gray {
-  height: 1px;
-  background-color: #dadada
-}
-
-.scroll-content {
-  background-color: #ffffff;
-  flex : 1 1 auto;
-}
-
-.rooms-search-footer {
+.video-control-footer {
   flex: 0 1 50px;
   padding-left: 14px;
   padding-right: 14px;
