@@ -1,8 +1,13 @@
 .video-control-bar{
-    height: 24px;
-    background-color: E7E7E7;
+    background-color: #00000F;
+    color: antiquewhite;
     text-align: center;
     width: 100%;
+    height: 100%;
+}
+
+.video-controls{
+    overflow: hidden;
 }
 
 .share-screen-icon {
@@ -28,14 +33,23 @@
     color: #454545
 }
 
-.share-screen:hover {
-    background-color: #EBEBEB;
+.share-screen-icon:hover {
+    color: #838383;
 }
 
 .video-icon:hover {
-    background-color: #EBEBEB;
+    color: #838383;
 }
 
 .audio-icon:hover {
+    color: #838383;
+}
+
+.highlights-bar{
+    background-color: #00000F;
+    float: left;
+}
+
+.highlights-bar:hover{
     background-color: #EBEBEB;
 }

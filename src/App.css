@@ -26,7 +26,6 @@
 
 .video-control-footer {
   flex: 0 1 50px;
-  padding-top: 15px;
-  padding-bottom: 11px;
+  padding-bottom: 0px;
   background-color: #ffffff;
 }
