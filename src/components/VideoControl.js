@@ -10,7 +10,7 @@ class VideoButtons extends React.Component {
             <div className='video-control-bar'>
                 <MdScreenShare className='share-screen-icon'/>
                 <BsFillCameraVideoFill className='video-icon'/>
-                {/* <AiTwotoneAudio className='audio-icon'/> */}
+                <AiTwotoneAudio className='audio-icon'/>
             </div>
         )
     }
