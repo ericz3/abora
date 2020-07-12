@@ -8,9 +8,17 @@ class VideoButtons extends React.Component {
     render (){
         return (
             <div className='video-control-bar'>
-                <MdScreenShare className='share-screen-icon'/>
-                <BsFillCameraVideoFill className='video-icon'/>
-                <AiTwotoneAudio className='audio-icon'/>
+                <div className='video-controls'>
+                    <div className='highlights-bar'>
+                        <MdScreenShare className='share-screen-icon'/>
+                    </div>
+                    <div className='highlights-bar'>
+                        <BsFillCameraVideoFill className='video-icon'/>
+                    </div>
+                    <div className='highlights-bar'>
+                        <AiTwotoneAudio className='audio-icon'/>
+                    </div>
+                </div>
             </div>
         )
     }
