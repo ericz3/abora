@@ -10,7 +10,7 @@ class App extends React.Component{
   render (){
     return (
       <div className='App'>
-        <div>
+        <div className='scroll-content'>
           <Video/>
         </div>
         <div className='video-control-footer'>
