@@ -3,6 +3,7 @@ import propTypes from 'prop-types';
 import {FaPlus} from 'react-icons/fa'
 import {FaCaretDown, FaCaretRight} from 'react-icons/fa'
 import './RoomsList.css'
+import IconButton from '@material-ui/core/Button';
 
 const roomTypes = {
     personal: 'personal',
@@ -41,7 +42,7 @@ class RoomsList extends React.Component {
                     </div>
                     {this.props.roomType === roomTypes.team && 
                         <div className='create-room-button' onClick={this.createRoom}>
-                            <FaPlus/>
+                           <FaPlus/>
                         </div>
                     }
                 </div>
