@@ -9,7 +9,6 @@ class RoomSearchBar extends React.Component {
             <div className='search-bar'>
                 <FaSearch className='search-icon'/>
                 <input type='text'></input>
-                
             </div>
         )
     }
