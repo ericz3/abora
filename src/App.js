@@ -5,6 +5,15 @@ import RoomsSearchBar from './components/SearchBar';
 import './App.css';
 
 class App extends React.Component{
+  // constructor(props){
+  //   super(props);
+
+  //   this.state = {
+  //       showSettings: false,
+  //       showInviteDialogue: false
+  //   };
+  // }
+
   render (){
     console.log(window.location.href); 
     return (
