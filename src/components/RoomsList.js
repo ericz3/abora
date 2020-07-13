@@ -3,7 +3,6 @@ import propTypes from 'prop-types';
 import {FaPlus} from 'react-icons/fa'
 import {FaCaretDown, FaCaretRight} from 'react-icons/fa'
 import './RoomsList.css'
-import IconButton from '@material-ui/core/Button';
 
 const roomTypes = {
     personal: 'personal',
