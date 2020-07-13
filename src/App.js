@@ -2,31 +2,25 @@ import React from 'react';
 import Header from './components/Header';
 import RoomsList from './components/RoomsList';
 import RoomsSearchBar from './components/SearchBar';
+// import PerfectScrollbar from 'react-perfect-scrollbar'
 import './App.css';
 
 class App extends React.Component{
-  // constructor(props){
-  //   super(props);
-
-  //   this.state = {
-  //       showSettings: false,
-  //       showInviteDialogue: false
-  //   };
-  // }
-
   render (){
-    console.log(window.location.href); 
     return (
       <div className='App'>
-        <Header />
         <div className='scroll-content'>
-          <RoomsList roomType={RoomsList.roomTypes.team}/>
-          <div className='line-horizontal-white'/>
-          <RoomsList roomType={RoomsList.roomTypes.personal}/>
+          {/* <PerfectScrollbar component='div'> */}
+            <RoomsList roomType={RoomsList.roomTypes.team}/>
+            <div className='line-horizontal-white'/>
+            <RoomsList roomType={RoomsList.roomTypes.personal}/>
+          {/* </PerfectScrollbar> */}
         </div>
-        <div className='line-horizontal-gray'/> 
+        <div className='header-bar'>
+          <Header />
+        </div>
         <div className='rooms-search-footer'>
-          <RoomsSearchBar/>
+          <RoomsSearchBar />
         </div>
       </div>
     );

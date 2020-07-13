@@ -2,6 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import {FaPlus} from 'react-icons/fa'
 import {FaCaretDown, FaCaretRight} from 'react-icons/fa'
+import Collapse from '@material-ui/core/Collapse';
 import './RoomsList.css'
 
 const roomTypes = {
@@ -46,7 +47,9 @@ class RoomsList extends React.Component {
                     }
                 </div>
                 {/* replace with list*/}
-                {this.state.show && <div style = {{height : '40px', background : '#FFFFFF'}}></div>}
+                <Collapse in={this.state.show} timeout={200} >
+                    <div style = {{height : '600px', background : '#FFFFFF'}}></div> 
+                </Collapse>
             </div>
         );
     }
