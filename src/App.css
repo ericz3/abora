@@ -30,10 +30,15 @@
 } */
 
 .App {
-  display: flex;
-  flex-flow: column;
   height: 100%;
-  width: 100%
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+.header-bar {
+  position: sticky;
+  height:62px;
+  top:0px;
 }
 
 .line-horizontal-white {
@@ -48,11 +53,22 @@
 
 .scroll-content {
   background-color: #ffffff;
-  flex : 1 1 auto;
+  overflow: auto;
+  position: absolute;
+  top: 62px;
+  left: 0px;
+  right: 0px;
+  /* overflow-y:scroll; */
 }
 
 .rooms-search-footer {
-  flex: 0 1 50px;
+  position: fixed;
+  bottom: 0px;
+  height: 50px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
+  border-top: 1px solid #dadada;
   padding-left: 14px;
   padding-right: 14px;
   padding-top: 10px;
