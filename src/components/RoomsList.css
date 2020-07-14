@@ -10,6 +10,7 @@
     padding-top: 14px;
     padding-left: 19px;
     padding-right: 19px;
+    cursor: pointer;
 }
 
 .create-room-button {
@@ -19,6 +20,7 @@
     height: 30px;
     padding: 8px;
     margin-top: -7px;
+    cursor: pointer;
 }
 
 .create-room-button:hover {
