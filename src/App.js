@@ -14,13 +14,11 @@ class App extends React.Component{
         <div className='header-bar'>
           <Header />
         </div>
-        <div className='scroll'>
-          <SimpleBar className='scroll-content'>
-              <RoomsList roomType={RoomsList.roomTypes.team}/>
-              <div className='line-horizontal-white'/>
-              <RoomsList roomType={RoomsList.roomTypes.personal}/>
-          </SimpleBar>
-        </div>
+        <SimpleBar className='scroll-content'>
+            <RoomsList roomType={RoomsList.roomTypes.team}/>
+            <div className='line-horizontal-white'/>
+            <RoomsList roomType={RoomsList.roomTypes.personal}/>
+        </SimpleBar>
         <div className='rooms-search-footer'>
           <RoomsSearchBar />
         </div>
