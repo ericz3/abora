@@ -48,7 +48,7 @@ class RoomsList extends React.Component {
                 </div>
                 {/* replace with list*/}
                 <Collapse in={this.state.show} timeout={200} >
-                    <div style = {{height : '600px', background : '#FFFFFF'}}></div> 
+                    <div style = {{height : '600px', background : '#ffffff'}}></div> 
                 </Collapse>
             </div>
         );

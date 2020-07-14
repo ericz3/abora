@@ -30,8 +30,6 @@
 } */
 
 .App {
-  height: 100%;
-  width: 100%;
   background-color: #FFFFFF;
 }
 
@@ -53,13 +51,13 @@
 
 .scroll-content {
   background-color: #ffffff;
-  overflow: auto;
-  position: absolute;
+  position: fixed;
   top: 62px;
   left: 0px;
   right: 0px;
-  /* overflow-y:scroll; */
+  bottom: 50px;
 }
+
 
 .rooms-search-footer {
   position: fixed;
