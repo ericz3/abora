@@ -1,8 +1,8 @@
-.header-bar {
+.header {
     width: 100%; 
     height: 62px; 
     background-color: #FFFFFF;
-    position: relative;
+    border-bottom: 1px solid #dadada;
 }
 
 .logo {
