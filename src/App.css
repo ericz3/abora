@@ -48,6 +48,10 @@
   background-color: #dadada
 }
 
+.container {
+  display:inline-block;
+}
+
 .scroll-content {
   background-color: #ffffff;
   position: fixed;
@@ -56,7 +60,6 @@
   right: 0px;
   bottom: 50px;
 }
-
 
 .rooms-search-footer {
   position: fixed;
