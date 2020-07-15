@@ -6,7 +6,7 @@ import Login from './Login';
 
 ReactDOM.render(
   <HashRouter>
-    <Route exact path='/'><Redirect to='/home'/></Route>
+    <Route exact path='/'><Redirect to='/login'/></Route>
     <Route path='/login' component={ Login }/>
     <Route path='/home' component={ App }/>
   </HashRouter>,

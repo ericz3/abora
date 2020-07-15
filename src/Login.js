@@ -4,8 +4,8 @@ import './Login.css'
 class Login extends React.Component{
     render(){
         return (
-            <div >
-               login
+            <div className='Login'>
+               
             </div>
         )
     }
