@@ -27,8 +27,7 @@ function SettingsMenu() {
                 keepMounted
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
-                TransitionComponent={Fade}
-            >
+                TransitionComponent={Fade}>
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>Preferences</MenuItem>
                 <MenuItem onClick={handleClose}>Invite</MenuItem>
