@@ -4,8 +4,6 @@ import Header from './components/Header';
 import RoomsList from './components/RoomsList';
 import RoomsSearchBar from './components/SearchBar';
 import SimpleBar from 'simplebar-react';
-import Video from './components/Video';
-import VideoControl from './components/VideoControl';
 
 import "simplebar/src/simplebar.css";
 import './App.css';
