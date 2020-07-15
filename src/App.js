@@ -13,6 +13,7 @@ class App extends React.Component{
         <div className='scroll-content'>
           <Video/>
         </div>
+        <div className='line-horizontal-gray'/> 
         <div className='video-control-footer'>
           <VideoControl/>
        </div>

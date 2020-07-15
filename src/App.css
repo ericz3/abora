@@ -29,3 +29,8 @@
   padding-bottom: 0px;
   background-color: #ffffff;
 }
+
+.line-horizontal-gray {
+  height: 1px;
+  background-color: #dadada
+}
