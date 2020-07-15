@@ -4,6 +4,8 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import {BsGearFill} from 'react-icons/bs'
 import Fade from '@material-ui/core/Fade';
+import { Link } from 'react-router-dom';
+import './SettingsMenu.css'
 
 function SettingsMenu() {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -31,7 +33,11 @@ function SettingsMenu() {
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>Preferences</MenuItem>
                 <MenuItem onClick={handleClose}>Invite</MenuItem>
-                <MenuItem onClick={handleClose}>Sign out</MenuItem>
+                <Link to="/login">
+                    <MenuItem onClick={handleClose}>
+                        Sign Out
+                    </MenuItem>
+                </Link>
             </Menu>
         </div>
     )
