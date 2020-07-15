@@ -8,6 +8,7 @@ class Login extends React.Component{
     render(){
         return (
             <div className='Login'>
+                
                 <Link 
                     style = {{height: '40px', width: '40px', backgroundColor: '#454545'}} 
                     to="/home">
