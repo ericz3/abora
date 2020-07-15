@@ -45,9 +45,3 @@ app.on('activate', () => {
     createWindow()
   }
 })
-<<<<<<< HEAD
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
-=======
->>>>>>> 0e88bc077fff5c4b4dc0eeead52e869ee74a771e

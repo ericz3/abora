@@ -1,11 +1,9 @@
 import React from 'react';
-import './VideoControl.css';
+import './MediaControls.css';
 import {MdScreenShare, MdVideocam, MdVideocamOff} from 'react-icons/md'
 import {IoMdMicOff, IoMdMic} from 'react-icons/io'
-// import {AiTwotoneAudio} from 'react-icons/ai'
 
-class VideoButtons extends React.Component {
-    
+class MediaControls extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -39,15 +37,15 @@ class VideoButtons extends React.Component {
             : <MdScreenShare className='share-screen-icon'/>
 
         return (
-            <div className='video-control-bar'>
-                <div className='video-controls' >
-                    <div className='highlights-bar' onClick={this.toggleMic}>
+            <div className='media-controls-bar'>
+                <div className='media-controls' >
+                    <div className='media-button' onClick={this.toggleMic}>
                         {mic}
                     </div>
-                    <div className='highlights-bar' onClick={this.toggleVideo}>
+                    <div className='media-button' onClick={this.toggleVideo}>
                         {video}
                     </div>
-                    <div className='highlights-bar' onClick={this.toggleSharescreen}>
+                    <div className='media-button' onClick={this.toggleSharescreen}>
                         {shareScreen}
                     </div>
                 </div>
@@ -56,4 +54,4 @@ class VideoButtons extends React.Component {
     }
 }
 
-export default VideoButtons
+export default MediaControls

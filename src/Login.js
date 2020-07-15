@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
 
-const { BrowserWindow } = window.require('electron');
+// const { BrowserWindow } = window.require('electron');
 
 class Login extends React.Component{
     render(){
