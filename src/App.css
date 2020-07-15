@@ -24,7 +24,6 @@
   padding: 7px 20px;
   cursor: pointer;
 }
-
 .btn:hover {
   background: #666;
 } */
@@ -73,3 +72,9 @@
   padding-bottom: 10px;
   background-color: #ffffff;
 }
+
+.video-control-footer {
+  flex: 0 1 50px;
+  padding-bottom: 0px;
+  background-color: #ffffff;
+} 
