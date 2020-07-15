@@ -1,5 +1,5 @@
 .video-control-bar{
-    background-color: #00000F;
+    background-color: #ffffff;
     color: antiquewhite;
     text-align: center;
     width: 100%;
@@ -10,46 +10,43 @@
     overflow: hidden;
 }
 
+.share-screen-icon-selected{
+    width: 25px;
+    height: 25px;
+    color: #3de759;
+    margin-top: 12px;
+}
+
 .share-screen-icon {
-    /* float: left; */
-    /* margin-left: 25%; */
-    margin-right: 30px;
-    margin-top: 4px;
-    color: #454545
+    width: 25px;
+    height: 25px;
+    color: #454545;
+    margin-top: 12px;
 }
 
 .video-icon {
-    /* float: left; */
-    /* margin-left: 45%; */
-    margin-right: 30px;
-    margin-top: 4px;
-    color: #454545
+    width: 25px;
+    height: 25px;
+    color: #454545;
+    margin-top: 12px;
 }
 
 .audio-icon {
-    /* float: left; */
-    /* margin-left: 70%; */
-    margin-top: 4px;
-    color: #454545
-}
-
-.share-screen-icon:hover {
-    color: #838383;
-}
-
-.video-icon:hover {
-    color: #838383;
-}
-
-.audio-icon:hover {
-    color: #838383;
+    width: 25px;
+    height: 25px;   
+    color: #454545;
+    margin-top: 12px;
 }
 
 .highlights-bar{
-    background-color: #00000F;
-    float: left;
+    background-color: #ffffff;
+    width: 60px;
+    height: 50px;
+    display: inline-block;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 .highlights-bar:hover{
-    background-color: #EBEBEB;
+    background-color: #c7c7c7;
 }

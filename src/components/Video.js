@@ -1,13 +1,14 @@
 import React from 'react';
+import './Video.css';
 
-class VideoBar extends React.Component {
+class Video extends React.Component {
     render (){
         return (
             <div >
-
+                <script src="../../build/bundle.js"></script>
             </div>
         )
     }
 }
 
-export default VideoBar
+export default Video
