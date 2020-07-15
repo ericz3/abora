@@ -1,0 +1,14 @@
+.settings-button {
+    position: absolute;
+    right: 5px;
+    top: 8px
+}
+
+.settings-icon {
+    color: #606060
+}
+
+* {
+    color: #454545;
+    text-decoration : none
+}
