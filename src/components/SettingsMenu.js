@@ -20,7 +20,7 @@ function SettingsMenu() {
 
     return (
         <div>
-            <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+            <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} className="settings-button">
                 <BsGearFill className='settings-icon' />
             </IconButton>
             <Menu
