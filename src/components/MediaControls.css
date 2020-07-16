@@ -7,13 +7,16 @@
 }
 
 .media-controls{
-    overflow: hidden;
+    width: inherit;
+    height: inherit;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .share-screen-icon-selected{
     width: 25px;
     height: 25px;
-    color: #3de759;
+    color: #33ce31;
     margin-top: 12px;
 }
 
@@ -41,12 +44,38 @@
 .media-button{
     background-color: #ffffff;
     width: 60px;
-    height: 50px;
+    height: 45px;
+    border-radius: 4px;
     display: inline-block;
-    margin-top: 2px;
-    margin-bottom: 2px;
 }
 
 .media-button:hover{
-    background-color: #c7c7c7;
+    background-color: #ddefec;
+    cursor: pointer;
+}
+
+.ss-button {
+    background-color: #ffffff;
+    width: 60px;
+    height: 45px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.ss-button:hover {
+    background-color: #ddefec;
+    cursor: pointer;
+}
+
+
+.ss-button-selected {
+    background-color: #8ef48a;
+    width: 60px;
+    height: 45px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.ss-button-selected:hover {
+    cursor: pointer;
 }
