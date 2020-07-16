@@ -1,7 +1,5 @@
-.settings-button {
-    position: absolute;
-    right: 5px;
-    top: 8px
+.settings-button:hover {
+   background-color: #ddefec !important;
 }
 
 .settings-icon {

@@ -1,7 +1,8 @@
 import React from 'react';
-import './MediaControls.css';
 import {MdScreenShare, MdVideocam, MdVideocamOff} from 'react-icons/md'
 import {IoMdMicOff, IoMdMic} from 'react-icons/io'
+
+import './MediaControls.css';
 
 class MediaControls extends React.Component {
     constructor(props){
@@ -32,10 +33,8 @@ class MediaControls extends React.Component {
         let mic = this.state.mic
             ? <IoMdMic className='audio-icon'/> 
             : <IoMdMicOff className='audio-icon'/>
-        let shareScreen = this.state.sharescreen
-            ? <MdScreenShare className='share-screen-icon-selected'/>
-            : <MdScreenShare className='share-screen-icon'/>
-
+        let shareScreenButtonClass = this.state.sharescreen
+            ? 'ss-button-selected' : 'ss-button'
         return (
             <div className='media-controls-bar'>
                 <div className='media-controls' >
@@ -45,8 +44,8 @@ class MediaControls extends React.Component {
                     <div className='media-button' onClick={this.toggleVideo}>
                         {video}
                     </div>
-                    <div className='media-button' onClick={this.toggleSharescreen}>
-                        {shareScreen}
+                    <div className={shareScreenButtonClass} onClick={this.toggleSharescreen}>
+                        <MdScreenShare className='share-screen-icon'/>
                     </div>
                 </div>
             </div>
