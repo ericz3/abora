@@ -19,7 +19,7 @@ function SettingsMenu() {
     };
 
     return (
-        <div>
+        <div className="settings-menu">
             <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} className="settings-button">
                 <BsGearFill className='settings-icon' />
             </IconButton>
@@ -33,7 +33,7 @@ function SettingsMenu() {
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>Preferences</MenuItem>
                 <MenuItem onClick={handleClose}>Invite</MenuItem>
-                <Link to="/login">
+                <Link to="/login" style={{ textDecoration: 'none', color:'#454545' }}>
                     <MenuItem onClick={handleClose}>
                         Sign Out
                     </MenuItem>

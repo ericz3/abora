@@ -1,3 +1,49 @@
 .Login {
-    
+    height: 100vh;
+    width: 100vw;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: white;
+}
+
+.logo_header {
+    color: #222e64;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    padding-bottom: 22px;
+    font-family: 'Montserrat Alternates';
+    user-select: none;
+}
+
+.Login > input {
+    height:56px;
+    width: 100%;
+    font-size: 16px;
+    color: #1e1e1e;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+    padding-left: 24px;
+    font-weight: 300;
+}
+
+.Login > input:hover {
+    background-color: #E0E0E0;
+}
+
+.Login > input:focus {
+    outline: none;
+    border: 1px solid #add2ef;
+    background-color: #E7E7E7;
+}
+
+.bottom-text {
+    font-size: 15px;
+    font-weight: 300;
+    color: #454545;
+    user-select: none;
 }

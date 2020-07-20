@@ -26,8 +26,7 @@ class App extends React.Component{
           </div>
         </div>
         <div className='right-panel'>
-          <SimpleBar className='scroll-content-right'>
-
+          <SimpleBar className='room-content-scroll'>
           </SimpleBar>
           <div className='media-control-footer'>
             <MediaControls />
