@@ -18,6 +18,10 @@ function SettingsMenu() {
         setAnchorEl(null);
     };
 
+    const logout = () => {
+        window.api.request("logout", "");
+    }
+
     return (
         <div className="settings-menu">
             <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} className="settings-button">
@@ -34,7 +38,7 @@ function SettingsMenu() {
                 <MenuItem onClick={handleClose}>Preferences</MenuItem>
                 <MenuItem onClick={handleClose}>Invite</MenuItem>
                 <Link to="/login" style={{ textDecoration: 'none', color:'#454545' }}>
-                    <MenuItem onClick={handleClose}>
+                    <MenuItem onClick={logout}>
                         Sign Out
                     </MenuItem>
                 </Link>

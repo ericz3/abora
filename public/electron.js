@@ -1,18 +1,27 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require("path")
 const isDev = require("electron-is-dev")
 
-function createWindow () {
+let win;
+
+async function createWindow () {
   // Create the browser window.
-  const win = new BrowserWindow({
+  win = new BrowserWindow({
     // width: 575,
     // height: 850,
     width: 380,
     height: 475,
     // titleBarStyle: 'hidden',
     webPreferences: {
-      nodeIntegration: true
-    }
+      nodeIntegration: false,
+      contextIsolation: true,
+      enableRemoteModule: false,
+      preload: path.join(__dirname, 'preload.js')
+    },
+
+    fullscreenable: false,
+    maximizable: false,
+    resizable: false,
   })
 
   // and load the index.html of the app.
@@ -46,4 +55,18 @@ app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow()
   }
+})
+
+ipcMain.on('login', (e) => {
+  win.setSize(575, 850);
+  win.center();
+  win.setMaximizable(true);
+  win.setFullScreenable(true);
+  win.setResizable(true);
+});
+
+ipcMain.on('logout', (e) => {
+  win.close();
+  win.destroy();
+  createWindow();
 })
