@@ -5,8 +5,6 @@ import { withStyles } from '@material-ui/core/styles';
 import {MdCheckBoxOutlineBlank, MdCheckBox} from 'react-icons/md'
 import './Login.css';
 
-// const { BrowserWindow } = window.require('electron');
-
 const LoginButton = withStyles({
     root: {
       background: '#9FC2E3',
@@ -37,6 +35,10 @@ class Login extends React.Component{
         this.setState(state => ({staySignedIn : !state.staySignedIn}));
     };
 
+    login = () => {
+        window.api.request("login", "");
+    }
+
     render (){
         let checkboxIcon = this.state.staySignedIn ? <MdCheckBox/>: <MdCheckBoxOutlineBlank/>;
         
@@ -59,7 +61,7 @@ class Login extends React.Component{
                 </div>
                 <div style = {{height:'42px'}}/>
                 <Link to="/home" style={{ textDecoration: 'none' }}>
-                    <LoginButton variant="contained">
+                    <LoginButton variant="contained" onClick={this.login}>
                             Sign In
                     </LoginButton>
                 </Link>
