@@ -11,7 +11,7 @@ const LoginButton = withStyles({
       borderRadius: '2px',
       border: 0,
       width: '100%',
-      height: '56px',
+      height: '44px',
       fontSize: '16px',
       fontWeight: 600,
       letterSpacing: '1.5px',
@@ -45,8 +45,6 @@ class Login extends React.Component{
         return (
             <div className='Login'>
                 <div className = 'logo_header'>Abora</div>
-                <input type="text" placeholder="Workspace-ID"></input>
-                <div style = {{height:'30px'}}/>
                 <input type="text" placeholder="Email"></input>
                 <div style = {{height:'16px'}}/>
                 <input type="password" placeholder="Password"></input>
@@ -59,7 +57,7 @@ class Login extends React.Component{
                         Forgot Password
                     </span>
                 </div>
-                <div style = {{height:'42px'}}/>
+                <div style = {{height:'46px'}}/>
                 <Link to="/home" style={{ textDecoration: 'none' }}>
                     <LoginButton variant="contained" onClick={this.login}>
                             Sign In

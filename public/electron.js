@@ -9,8 +9,8 @@ async function createWindow () {
   win = new BrowserWindow({
     // width: 575,
     // height: 850,
-    width: 380,
-    height: 475,
+    width: 320,
+    height: 354,
     // titleBarStyle: 'hidden',
     webPreferences: {
       nodeIntegration: false,
@@ -58,7 +58,7 @@ app.on('activate', () => {
 })
 
 ipcMain.on('login', (e) => {
-  win.setSize(575, 850);
+  win.setSize(474, 600);
   win.center();
   win.setMaximizable(true);
   win.setFullScreenable(true);
