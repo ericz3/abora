@@ -2,10 +2,23 @@ import React from 'react';
 import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import { withStyles } from '@material-ui/core/styles';
 import {BsGearFill} from 'react-icons/bs'
 import Fade from '@material-ui/core/Fade';
 import { Link } from 'react-router-dom';
 import './SettingsMenu.css'
+
+const SettingsButton = withStyles(() =>({
+    root : {
+      color: '#454545',
+      border: 0,
+      width: '10px',
+      height: '10px',
+      hover: {
+          backgroundColor: '#ffffff'
+      },
+    },
+}))(IconButton);
 
 function SettingsMenu() {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -23,12 +36,12 @@ function SettingsMenu() {
     }
 
     return (
-        <div className="settings-menu">
-            <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} className="settings-button">
+        <div className="settings">
+            <SettingsButton aria-controls="settings-menu" aria-haspopup="true" onClick={handleClick}>
                 <BsGearFill className='settings-icon' />
-            </IconButton>
+            </SettingsButton>
             <Menu
-                id="simple-menu"
+                id="settings-menu"
                 anchorEl={anchorEl}
                 keepMounted
                 open={Boolean(anchorEl)}

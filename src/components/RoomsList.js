@@ -28,26 +28,28 @@ class RoomsList extends React.Component {
 
     render() {
         let caret = this.state.show 
-                    ? <FaCaretDown className='float-left'/> 
-                    : <FaCaretRight className='float-left'/>
+                    ? <FaCaretDown/> 
+                    : <FaCaretRight/>
         let dropDownTitle = (this.props.roomType === roomTypes.team) 
                     ? 'Team Rooms'
                     : 'Personal Rooms'
         return (
             <div className='unselectable'>
                 <div className='drop-down' onClick={this.toggleShow}>
-                    {caret}
                     <div className='drop-down-title'> 
+                        {caret}
+                        &nbsp;
+                        &nbsp;
                         {dropDownTitle}
                     </div>
                     {this.props.roomType === roomTypes.team && 
                         <div className='create-room-button' onClick={this.createRoom}>
-                           <FaPlus/>
+                           <FaPlus className='add-icon'/>
                         </div>
                     }
                 </div>
                 <Collapse in={this.state.show} timeout={200} >
-                    <div style = {{height : '600px', background : '#ffffff'}}></div> 
+                    <div style = {{height : '300px', background : '#ffffff'}}></div> 
                 </Collapse>
             </div>
         );

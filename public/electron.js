@@ -58,7 +58,7 @@ app.on('activate', () => {
 })
 
 ipcMain.on('login', (e) => {
-  win.setSize(474, 600);
+  win.setSize(500, 730);
   win.center();
   win.setMaximizable(true);
   win.setFullScreenable(true);
