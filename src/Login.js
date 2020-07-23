@@ -1,27 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
-import { withStyles } from '@material-ui/core/styles';
 import {MdCheckBoxOutlineBlank, MdCheckBox} from 'react-icons/md'
 import './Login.css';
-
-const LoginButton = withStyles({
-    root: {
-      background: '#9FC2E3',
-      borderRadius: '2px',
-      border: 0,
-      width: '100%',
-      height: '44px',
-      fontSize: '16px',
-      fontWeight: 600,
-      letterSpacing: '1.5px',
-      color: 'white',
-      '&:hover': {
-          backgroundColor: '#ADD1EC'
-      }
-    }
-})(Button);
-
 
 class Login extends React.Component{
     constructor(props){
@@ -58,10 +38,10 @@ class Login extends React.Component{
                     </span>
                 </div>
                 <div style = {{height:'46px'}}/>
-                <Link to="/home" style={{ textDecoration: 'none' }}>
-                    <LoginButton variant="contained" onClick={this.login}>
-                            Sign In
-                    </LoginButton>
+                <Link to="/home" style={{ textDecoration: 'none' }} onClick={this.login}>
+                    <div className="login-button">
+                        SIGN IN
+                    </div>
                 </Link>
             </div>
         )

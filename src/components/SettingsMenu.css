@@ -1,12 +1,15 @@
-.settings-button:hover {
-   background-color: #ddefec !important;
-}
-
 .settings-icon {
-    color: #606060
+    color: #454545
 }
 
 .settings-menu {
-    color: #454545;
-    text-decoration : none
+    
+    text-decoration : none;
+    width: 10px;
+    height: 10px
+}
+
+.settings-button {
+    position: absolute;
+    right: 400px;
 }
