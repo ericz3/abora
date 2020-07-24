@@ -33,12 +33,12 @@
   background-color: #dadada
 }
 
-.scroll-content-left {
+.scroll-content {
   position: fixed;
   top: 54px;
   left: 0px;
   right: 0px;
-  bottom: 178px;
+  bottom: 156px;
   width:inherit;
   border-right: 1px solid #dadada;
 }
@@ -59,6 +59,6 @@
   color: #E0E0E0;
   padding-top: 2px;
   padding-bottom: 2px;
-  height: 126px;
+  height: 118px;
   width: inherit;
 }
