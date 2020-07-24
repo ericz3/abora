@@ -20,7 +20,7 @@ class App extends React.Component{
     return (
       <div className='App'>
         <Header />
-        <SimpleBar className='scroll-content-left'>
+        <SimpleBar className='scroll-content'>
             <RoomsList roomType={RoomsList.roomTypes.team}/>
             <div className='line-horizontal-white'/>
             <RoomsList roomType={RoomsList.roomTypes.personal}/>
