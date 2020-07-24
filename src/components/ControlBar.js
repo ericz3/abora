@@ -64,23 +64,30 @@ class ControlBar extends React.Component {
             : <RiFullscreenLine className='icon'/>;
         return (
             <div className='control-bar'>
-                <div className='media-button' onClick={this.toggleMic}>
-                    {mic}
+                <div>
+                    <div className='media-button' onClick={this.toggleMic}>
+                        {mic}
+                    </div>
+                    <div className='media-button' onClick={this.toggleVideo}>
+                        {video}
+                    </div>
+                    <div className='media-button' onClick={this.toggleSharescreen}>
+                        {screenshare}
+                    </div>
                 </div>
-                <div className='media-button' onClick={this.toggleVideo}>
-                    {video}
+                <div className='leave-button'>
+                    Leave
                 </div>
-                <div className='media-button' onClick={this.toggleSharescreen}>
-                    {screenshare}
-                </div>
-                <div className='right-button' onClick={this.toggleFullscreen}>
-                    {fullscreenIcon}
-                </div>
-                <div className='right-button' onClick={this.toggleRecord}>
-                    {record}
-                </div>
-                <div className='right-button'>
-                    <MdChatBubble className='icon'/>
+                <div>
+                    <div className='right-button' onClick={this.toggleFullscreen}>
+                        {fullscreenIcon}
+                    </div>
+                    <div className='right-button' onClick={this.toggleRecord}>
+                        {record}
+                    </div>
+                    <div className='right-button'>
+                        <MdChatBubble className='icon'/>
+                    </div>
                 </div>
             </div>
         )
