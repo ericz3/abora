@@ -17,48 +17,12 @@
   display: none;
 }
 
-.App {
-  background-color: #FFFFFF;
-  height: 100vh;
-  width: 100vw;
-  white-space: nowrap;
-}
-
 .line-horizontal-white {
   height: 1px;
+  background-color: white;
 }
 
 .line-horizontal-gray {
   height: 1px;
   background-color: #dadada
-}
-
-.scroll-content {
-  position: fixed;
-  top: 54px;
-  left: 0px;
-  right: 0px;
-  bottom: 156px;
-  width:inherit;
-  border-right: 1px solid #dadada;
-}
-
-.control-bar-footer {
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  height: 38px;
-  border-top: 1px solid #e6e6e6;
-  width:inherit;
-}
-
-.video-region {
-  position: fixed;
-  bottom: 38px;
-  background-color: #323232;
-  color: #E0E0E0;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  height: 118px;
-  width: inherit;
 }

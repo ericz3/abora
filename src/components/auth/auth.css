@@ -2,6 +2,15 @@
     height: 100vh;
     width: 100vw;
     padding: 24px;
+    padding-top: 26px;
+    background-color: white;
+}
+
+.Register {
+    height: 100vh;
+    width: 100vw;
+    padding: 24px;
+    padding-top: 66px;
     background-color: white;
 }
 
@@ -16,7 +25,7 @@
     user-select: none;
 }
 
-.Login > input {
+.Register > input, .Login > input {
     height:44px;
     width: 100%;
     font-size: 14px;
@@ -28,17 +37,17 @@
     font-weight: 300;
 }
 
-.Login > input:hover {
+.Register > input:hover, .Login > input:hover {
     background-color: #E0E0E0;
 }
 
-.Login > input:focus {
+.Register > input:focus, .Login > input:focus {
     outline: none;
     border: 1px solid #add2ef;
     background-color: #E7E7E7;
 }
 
-.bottom-text {
+.small-text {
     font-size: 13px;
     font-weight: 300;
     color: #454545;
@@ -63,4 +72,18 @@
 .login-button:hover {
     background-color: #ADD1EC;
     box-shadow: gray;
+}
+
+.back-button {
+    width: 28px;
+    height: 28px;
+    color: #454545;
+    cursor: pointer;
+    position: absolute;
+    left: 28px;
+    top: 20px
+}
+
+.back-button:hover {
+    color: #6a6a6a
 }

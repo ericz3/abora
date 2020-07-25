@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import {FaPlus} from 'react-icons/fa'
+// import {FaPlus} from 'react-icons/fa'
 import {FaCaretDown, FaCaretRight} from 'react-icons/fa'
 import Collapse from '@material-ui/core/Collapse';
 import './RoomsList.css'
@@ -42,11 +42,11 @@ class RoomsList extends React.Component {
                         &nbsp;
                         {dropDownTitle}
                     </div>
-                    {this.props.roomType === roomTypes.team && 
+                    {/* {this.props.roomType === roomTypes.team && 
                         <div className='create-room-button' onClick={this.createRoom}>
                            <FaPlus className='add-icon'/>
                         </div>
-                    }
+                    } */}
                 </div>
                 <Collapse in={this.state.show} timeout={200} >
                     <div style = {{height : '300px', background : '#ffffff'}}></div> 

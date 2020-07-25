@@ -33,14 +33,14 @@
     margin-top: 5px;
     margin-left: 10px;
     border-radius: 5px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
-.team-select:hover {
+/* .team-select:hover {
     background-color: #e5f2f4;
-}
+} */
 
-.settings-icon {
+.header-button-icon {
     color: #454545;
     width: 22px;
     height: 22px;
@@ -67,4 +67,23 @@
 .chevron-down {
     margin-top: 14px;
     margin-right: 6px;
+}
+
+.sign-out {
+    margin-top: 5px;
+    margin-right: 1px;
+    width: 66px;
+    height: 44px;
+    text-align: center;
+    padding-top: 13px;
+    background-color: white;
+    border-radius: 5px;
+    color: #454545;
+    float: right;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sign-out:hover {
+    background-color: #e5f2f4;
 }

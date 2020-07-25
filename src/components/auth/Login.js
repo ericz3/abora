@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {MdCheckBoxOutlineBlank, MdCheckBox} from 'react-icons/md'
-import './Login.css';
+import './auth.css';
 
 class Login extends React.Component{
     constructor(props){
@@ -24,18 +24,30 @@ class Login extends React.Component{
         
         return (
             <div className='Login'>
+                <div className='small-text' >
+                    <Link
+                        to="/register"
+                        style={{position: 'absolute', 
+                            top: '4px', 
+                            right: '24px', 
+                            cursor: 'pointer',
+                            color: 'inherit',
+                            textDecoration: 'none'}}>
+                        Register
+                    </Link>
+                </div>
                 <div className = 'logo_header'>Abora</div>
                 <input type="text" placeholder="Email"></input>
                 <div style = {{height:'16px'}}/>
                 <input type="password" placeholder="Password"></input>
                 <div style = {{height:'16px'}}/>
-                <div className='bottom-text'>
+                <div className='small-text'>
                     <span style={{float:'left', cursor: 'pointer'}} onClick={this.toggleCheckBox}>
                         {checkboxIcon} Stay Signed In
                     </span>
-                    <span style={{float:'right', cursor: 'pointer'}}>
+                    <Link style={{float:'right', cursor: 'pointer', color: 'inherit', textDecoration: 'none'}}>
                         Forgot Password
-                    </span>
+                    </Link>
                 </div>
                 <div style = {{height:'46px'}}/>
                 <Link to="/home" style={{ textDecoration: 'none' }} onClick={this.login}>

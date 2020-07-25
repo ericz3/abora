@@ -5,13 +5,13 @@ import {
     MdMicOff, 
     MdVideocam, 
     MdVideocamOff, 
-    MdChatBubble
+    // MdChatBubble
 } from 'react-icons/md'
-import {
-    RiRecordCircleLine, 
-    RiFullscreenLine,
-    RiFullscreenExitLine
-} from 'react-icons/ri';
+// import {
+//     RiRecordCircleLine, 
+//     RiFullscreenLine,
+//     RiFullscreenExitLine
+// } from 'react-icons/ri';
 import './ControlBar.css';
 
 class ControlBar extends React.Component {
@@ -56,12 +56,12 @@ class ControlBar extends React.Component {
         let screenshare = this.state.sharescreen
             ?  <MdScreenShare className='icon-green'/>
             :  <MdScreenShare className='icon'/>;
-        let record = this.state.record
-            ?  <RiRecordCircleLine className='icon-green'/>
-            :  <RiRecordCircleLine className='icon'/>;
-        let fullscreenIcon = this.state.fullscreen
-            ? <RiFullscreenExitLine className='icon'/>
-            : <RiFullscreenLine className='icon'/>;
+        // let record = this.state.record
+        //     ?  <RiRecordCircleLine className='icon-green'/>
+        //     :  <RiRecordCircleLine className='icon'/>;
+        // let fullscreenIcon = this.state.fullscreen
+        //     ? <RiFullscreenExitLine className='icon'/>
+        //     : <RiFullscreenLine className='icon'/>;
         return (
             <div className='control-bar'>
                 <div>
@@ -78,7 +78,7 @@ class ControlBar extends React.Component {
                 <div className='leave-button'>
                     Leave
                 </div>
-                <div>
+                {/* <div>
                     <div className='right-button' onClick={this.toggleFullscreen}>
                         {fullscreenIcon}
                     </div>
@@ -88,7 +88,7 @@ class ControlBar extends React.Component {
                     <div className='right-button'>
                         <MdChatBubble className='icon'/>
                     </div>
-                </div>
+                </div> */}
             </div>
         )
     }
