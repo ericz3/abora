@@ -2,7 +2,7 @@
     height: 100vh;
     width: 100vw;
     padding: 24px;
-    padding-top: 26px;
+    padding-top: 32px;
     background-color: white;
 }
 
@@ -10,7 +10,15 @@
     height: 100vh;
     width: 100vw;
     padding: 24px;
-    padding-top: 66px;
+    padding-top: 61px;
+    background-color: white;
+}
+
+.Forgot-Pass {
+    height: 100vh;
+    width: 100vw;
+    padding: 24px;
+    padding-top: 68px;
     background-color: white;
 }
 
@@ -20,12 +28,12 @@
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 1.2px;
-    padding-bottom: 22px;
+    padding-bottom: 18px;
     font-family: 'Montserrat Alternates';
     user-select: none;
 }
 
-.Register > input, .Login > input {
+input {
     height:44px;
     width: 100%;
     font-size: 14px;
@@ -33,29 +41,79 @@
     border: 1px solid transparent;
     border-radius: 5px;
     background-color: #E7E7E7;
-    padding-left: 20px;
+    padding-left: 14px;
     font-weight: 300;
 }
 
-.Register > input:hover, .Login > input:hover {
-    background-color: #E0E0E0;
+input:hover {
+    background-color: #e3e3e3;
 }
 
-.Register > input:focus, .Login > input:focus {
+input:focus {
     outline: none;
     border: 1px solid #add2ef;
     background-color: #E7E7E7;
 }
 
-.small-text {
+.Register input {
+    height: 36px;
     font-size: 13px;
+}
+
+.floating-label {
+    user-select: none;
+}
+
+.Register input:focus ~ .floating-label,
+.Register input:not(:focus):valid ~ .floating-label{
+    top: 0px;
+    bottom: 10px;
+    left: 15px;
+    font-size: 10px;
+    opacity: 1;
+}
+
+.Register .floating-label {
+    color: #727272;;
+    font-weight: 300;
+    font-size: 13px;
+    position: absolute;
+    pointer-events: none;
+    left: 15px;
+    top: 10px;
+    transition: 0.2s ease all;
+}
+
+.Login input:focus ~ .floating-label,
+.Login input:not(:focus):valid ~ .floating-label{
+    top: 2px;
+    bottom: 10px;
+    left: 15px;
+    font-size: 11px;
+    opacity: 1;
+}
+
+.Login .floating-label {
+    color: #727272;;
+    font-weight: 300;
+    font-size: 14px;
+    position: absolute;
+    pointer-events: none;
+    left: 15px;
+    top: 15px;
+    transition: 0.2s ease all;
+}
+
+.small-text {
+    font-size: 13.5px;
     font-weight: 300;
     color: #454545;
     user-select: none;
 }
 
-.login-button {
+.main-button {
     background-color: #9FC2E3;
+    user-select: none;
     border-radius: 3px;
     border: 0px;
     width: 100%;
@@ -69,21 +127,95 @@
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2), 0 6px 4px -4px rgba(0, 0, 0, 0.19);
 }
 
-.login-button:hover {
+.main-button:hover {
     background-color: #ADD1EC;
     box-shadow: gray;
 }
 
-.back-button {
+.button-icon {
     width: 28px;
     height: 28px;
     color: #454545;
     cursor: pointer;
+}
+
+.button-icon:hover {
+    color: #5e5e5e
+}
+
+.back-button {
     position: absolute;
     left: 28px;
     top: 20px
 }
 
-.back-button:hover {
-    color: #6a6a6a
+.password_rules_button {
+    position: absolute;
+    height: 28px;
+    top: 20px;
+    right: 28px;
+    padding-top: 7px;
+    color: #454545;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 300;
+    user-select: none;
 }
+
+.send-button {
+    position: absolute ;
+    border-radius: 3px;
+    height: 42px;
+    width: 42px;
+    padding: 7px;
+    top: 1px;
+    right: 1px;
+}
+
+.err_msg {
+    color: red;
+    font-size: 13.5px;
+    font-weight: 300;
+}
+
+.password_rules_modal {
+    position: absolute;
+    width: 200px;
+    height: 140px;
+    top: 46px;
+    right: 24px;
+    background-color: white;
+    outline-width: 0ch;
+    border-width: 0ch;
+    border-radius: 4px;
+    box-shadow: 1px 3px 8px 1px #b5b5b5cd;;
+}
+
+.password_rules_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(255, 255, 255, 0);
+}
+
+/* .secondary-button {
+    background-color: #9FC2E3;
+    border-radius: 6px;
+    border: 0px;
+    width: 70px;
+    height: 26px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: white;
+    text-align: center;
+    padding-top: 6px;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2), 0 6px 4px -4px rgba(0, 0, 0, 0.19);
+}
+
+.secondary-button:hover {
+    background-color: #ADD1EC;
+    box-shadow: gray;
+} */

@@ -9,8 +9,8 @@ function createWindow () {
   win = new BrowserWindow({
     // width: 575,
     // height: 850,
-    width: 320,
-    height: 354,
+    width: 340,
+    height: 374,
     // titleBarStyle: 'hidden',
     webPreferences: {
       nodeIntegration: false,
@@ -22,6 +22,7 @@ function createWindow () {
     fullscreenable: false,
     maximizable: false,
     resizable: false,
+    // resizable: true,
   })
 
   // and load the index.html of the app.
