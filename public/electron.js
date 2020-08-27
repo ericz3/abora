@@ -13,7 +13,7 @@ async function createWindow () {
     height: 354,
     // titleBarStyle: 'hidden',
     webPreferences: {
-      nodeIntegration: false,
+      nodeIntegration: true,
       contextIsolation: true,
       enableRemoteModule: false,
       preload: path.join(__dirname, 'preload.js')
@@ -26,11 +26,10 @@ async function createWindow () {
 
   // and load the index.html of the app.
   win.loadURL(
-      isDev ? 'http://localhost:3000' : 'file://${path.join(_dirname, "../build/index.html")}'
-      )
+    isDev ? 'http://localhost:3000' : 'file://${path.join(_dirname, "../build/index.html")}'
+    )
 
-  // Open the DevTools.
-  win.webContents.openDevTools()
+  win.webContents.openDevTools();
 
   win.removeMenu();
 }
