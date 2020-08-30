@@ -2,8 +2,9 @@ const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require("path")
 const isDev = require("electron-is-dev")
 
-let win;
+let win, vidWindow;
 
+//Create the main window
 async function createWindow () {
   // Create the browser window.
   win = new BrowserWindow({
@@ -26,7 +27,7 @@ async function createWindow () {
 
   // and load the index.html of the app.
   win.loadURL(
-      isDev ? 'http://localhost:3000' : 'file://${path.join(_dirname, "../build/index.html")}'
+      isDev ? 'http://localhost:3000' : 'file://${path.join(_dirname, "../public/index.html")}'
       )
 
   // Open the DevTools.
@@ -35,10 +36,27 @@ async function createWindow () {
   win.removeMenu();
 }
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
-app.whenReady().then(createWindow)
+
+
+//Avoid duplicated app launch
+const gotTheLock = app.requestSingleInstanceLock()
+if (!gotTheLock) {
+  app.quit()
+} else {
+  app.on('second-instance', (event, commandLine, workingDirectory) => {
+    // Someone tried to run a second instance, we should focus our window.
+    if (win) {
+      if (win.isMinimized()) win.restore()
+      win.focus()
+    }
+  })
+
+  // This method will be called when Electron has finished
+  // initialization and is ready to create browser windows.
+  // Some APIs can only be used after this event occurs.
+  app.whenReady().then(createWindow)
+}
+
 
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits
@@ -69,4 +87,16 @@ ipcMain.on('logout', (e) => {
   win.close();
   win.destroy();
   createWindow();
-})
+});
+
+//This IPC process is called to create a pop up window when the user joins a room
+ipcMain.on('video', (e) => {
+  vidWindow = new BrowserWindow({
+      height:800,
+      width: 400
+  });
+
+  vidWindow.loadURL('file://${path.join(__dirname, "../src/Video.html")}');
+  vidWindow.removeMenu();
+});
+
