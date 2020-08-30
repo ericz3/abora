@@ -10,7 +10,7 @@ contextBridge.exposeInMainWorld(
         //send: (channel, data) => {
         request: (channel, data) => {
             // whitelist channels
-            let validChannels = ["login", "logout"];
+            let validChannels = ["login", "logout", "video"];
             if (validChannels.includes(channel)) {
                 ipcRenderer.send(channel, data);
             }

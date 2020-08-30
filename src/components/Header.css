@@ -11,7 +11,7 @@
     float: left;
     width: 36px;
     height: 36px;
-    border-radius: 6px;
+    border-radius: 40px;
     margin-top: 4px;
     margin-left: 6px;
 }
@@ -42,8 +42,8 @@
 
 .settings-icon {
     color: #454545;
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
 }
 
 .header-button {
@@ -53,7 +53,7 @@
     height: 44px;
     padding-left: 11px;
     padding-top: 11px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     color: #454545;
     float: right;

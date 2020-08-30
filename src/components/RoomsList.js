@@ -3,7 +3,8 @@ import propTypes from 'prop-types';
 import {FaPlus} from 'react-icons/fa'
 import {FaCaretDown, FaCaretRight} from 'react-icons/fa'
 import Collapse from '@material-ui/core/Collapse';
-import './RoomsList.css'
+import Room from './Room';
+import './RoomsList.css';
 
 const roomTypes = {
     personal: 'personal',
@@ -49,7 +50,11 @@ class RoomsList extends React.Component {
                     }
                 </div>
                 <Collapse in={this.state.show} timeout={200} >
-                    <div style = {{height : '300px', background : '#ffffff'}}></div> 
+                    {this.props.roomType === roomTypes.team && 
+                        <div>
+                            <Room/>
+                        </div>
+                    }
                 </Collapse>
             </div>
         );
