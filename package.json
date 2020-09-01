@@ -16,7 +16,13 @@
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "simplebar-react": "^2.2.1"
+    "simplebar-react": "^2.2.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
+    "prismjs": "^1.6.0",
+    "stackblur-canvas": "^1.4.0",
+    "twilio": "^3.19.1",
+    "twilio-video": "^2.7.0"
   },
   "scripts": {
     "react-start": "react-scripts start",
@@ -46,6 +52,10 @@
     "concurrently": "^5.2.0",
     "electron": "^9.0.5",
     "electron-builder": "^22.7.0",
-    "wait-on": "^5.0.1"
+    "wait-on": "^5.0.1",
+    "browserify": "^14.3.0",
+    "copyfiles": "^1.2.0",
+    "npm-run-all": "^4.0.2",
+    "rimraf": "^2.6.1"
   }
 }
