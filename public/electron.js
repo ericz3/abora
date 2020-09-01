@@ -92,11 +92,12 @@ ipcMain.on('logout', (e) => {
 //This IPC process is called to create a pop up window when the user joins a room
 ipcMain.on('video', (e) => {
   vidWindow = new BrowserWindow({
-      height:800,
-      width: 400
+      height:500,
+      width: 250
   });
 
-  vidWindow.loadURL('file://${path.join(__dirname, "../src/Video.html")}');
+  vidWindow.loadURL('file://' + __dirname + '/Video.html');
+  vidWindow.webContents.openDevTools()
   vidWindow.removeMenu();
 });
 
