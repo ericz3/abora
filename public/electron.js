@@ -1,6 +1,13 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require("path")
 const isDev = require("electron-is-dev")
+const { jwt: { AccessToken } } = require('twilio');
+
+const VideoGrant = AccessToken.VideoGrant;
+
+require('dotenv').load()
+
+const MAX_ALLOWED_SESSION_DURATION = 14400;
 
 let win, vidWindow;
 
@@ -26,9 +33,10 @@ async function createWindow () {
   })
 
   // and load the index.html of the app.
-  win.loadURL(
-      isDev ? 'http://localhost:3000' : 'file://${path.join(_dirname, "../public/index.html")}'
-      )
+  win.loadURL('http://localhost:3000')
+  // win.loadURL(
+  //     isDev ? 'http://localhost:3000' : 'file://${path.join(_dirname, "../public/index.html")}'
+  //     )
 
   // Open the DevTools.
   win.webContents.openDevTools()
@@ -89,15 +97,34 @@ ipcMain.on('logout', (e) => {
   createWindow();
 });
 
+
 //This IPC process is called to create a pop up window when the user joins a room
 ipcMain.on('video', (e) => {
   vidWindow = new BrowserWindow({
       height:500,
-      width: 250
+      width: 500,
+      webPreferences: {
+        preload: path.join(__dirname, './../vid-preload.js'),
+        nodeIntegration: true
+      }
   });
-
-  vidWindow.loadURL('file://' + __dirname + '/Video.html');
-  vidWindow.webContents.openDevTools()
+  vidWindow.loadURL('file://' + __dirname + './../Video.html');
+  // vidWindow.webContents.openDevTools()
   vidWindow.removeMenu();
+
+  // Emitted when the window is closed.
+  vidWindow.on('closed', function () {
+    // Dereference the window object, usually you would store windows
+    // in an array if your app supports multi windows, this is the time
+    // when you should delete the corresponding element.
+    vidWindow = null
+  })
+});
+
+ipcMain.on('leave-video', (e) =>{
+  win.setSize(800, 10);
+  // vidWindow = null;
+  // vidWindow.close();
+  // vidWindow.destroy();
 });
 

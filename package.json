@@ -9,29 +9,35 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "cross-env": "^7.0.2",
+    "dotenv": "^4.0.0",
     "electron-is-dev": "^1.2.0",
+    "express": "^4.15.2",
     "frameless-titlebar": "^2.1.3",
+    "jquery": "^3.5.1",
+    "prismjs": "^1.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "simplebar-react": "^2.2.1",
-    "dotenv": "^4.0.0",
-    "express": "^4.15.2",
-    "prismjs": "^1.6.0",
     "stackblur-canvas": "^1.4.0",
     "twilio": "^3.19.1",
-    "twilio-video": "^2.7.0"
+    "twilio-video": "^2.7.0",
+    "ws": "^7.3.1"
   },
   "scripts": {
+    "run-electron": "electron .",
+    "run-node-server": "node server",
+    "build-web": "cd web && browserify src/video-demo.js > public/video-demo.js",
+    "clean-web": "cd web && rimraf public/video-demo.js",
     "react-start": "react-scripts start",
     "react-build": "react-scripts build",
     "react-test": "react-scripts test",
     "react-eject": "react-scripts eject",
     "electron-build": "electron-builder",
     "build": "npm run react-build && npm run electron-build",
-    "start": "node server && concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
+    "start": "concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\" \"npm run clean-web && npm run build-web && run-p run-electron run-node-server\""
   },
   "eslintConfig": {
     "extends": "react-app"

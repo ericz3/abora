@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import VideoPage from './VideoPage';
+
 import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 import Login from './Login';
 
@@ -19,10 +19,3 @@ if(mainElement){
   );
 }
 
-const vidElement = document.getElementById('vid');
-if(vidElement){
-  ReactDOM.render(
-    <VideoPage />,
-    vidElement
-  );
-}
