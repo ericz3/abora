@@ -192,12 +192,13 @@ async function connectAsync(data) {
 
     await localTracksPromise;
     
-
+    log('COnnecting');
     // Join the Room with the token from the server and the
     // LocalParticipant's Tracks.
     Video.connect(data.token, connectOptions).then(roomJoined, function(error) {
       log('Could not connect to Twilio: ' + error.message);
     });
+    log('COnnected?');
 }
 
 // When we are about to transition away from this page, disconnect
@@ -207,8 +208,9 @@ window.addEventListener('beforeunload', leaveRoomIfJoined);
 // Obtain a token from the server in order to connect to the Room.
 
 log("Generating Access Token");
-const data = generateToken(randomName());
+const data = generateToken('Johnny Chang');
 
+  log('heyy');
   identity = data.identity;
   log('Got access token with identity: ' + data.identity);
   
@@ -229,18 +231,6 @@ const data = generateToken(randomName());
     win.close();
     // window.api.request("leave-video", "");
   };
-
-
-
-
-
-
-
-
-
-
-
-
 
   $('#screen-share-checkbox').click(function() {
   });
